@@ -1,7 +1,10 @@
-[gd_scene load_steps=55 format=3 uid="uid://bfrfwp7fxuurr"]
+[gd_scene load_steps=56 format=3 uid="uid://bfrfwp7fxuurr"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_pfud6"]
 [ext_resource type="Texture2D" uid="uid://bo6n3d5ypp4n7" path="res://art/characters/player.png" id="2_yohgv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h6f2g"]
+radius = 7.07107
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s452b"]
 atlas = ExtResource("2_yohgv")
@@ -414,10 +417,17 @@ animations = [{
 }]
 
 [node name="player" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_pfud6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+shape = SubResource("CircleShape2D_h6f2g")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_480ly")
-animation = &"death"
+animation = &"side_walk"
+frame = 3
+frame_progress = 0.873625

@@ -70,17 +70,32 @@ texture = ExtResource("3_l1txm")
 12:8/0 = 0
 0:5/size_in_atlas = Vector2i(3, 4)
 0:5/0 = 0
+0:5/0/y_sort_origin = 14
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-11.6673, 14.1421, -4.59619, 12.3744, 8.13173, 11.6673, 12.0208, 18.7383, 10.2531, 24.7487, -1.76777, 26.8701, -9.89949, 22.6274)
 6:7/size_in_atlas = Vector2i(2, 2)
 6:7/0 = 0
+6:7/0/y_sort_origin = 5
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-14.1421, 13.7886, -15.2028, 1.41421, -0.707104, 1.06066, 14.4957, -2.47488, 14.8492, 8.83883, 9.8995, 15.2028, -6.01041, 15.9099)
 8:6/size_in_atlas = Vector2i(2, 3)
 8:6/0 = 0
+8:6/0/y_sort_origin = 10
+8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.01041, 21.5668, -8.13173, 15.2028, 7.07107, 15.5563, 4.24264, 21.2132)
 10:7/size_in_atlas = Vector2i(2, 2)
 10:7/0 = 0
+10:7/0/y_sort_origin = 3
+10:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.0208, 5.65685, -8, -5.3033, -1.41421, 0, 8, -2.47488, 14.1421, 4.59619, 8, 8, -5.65685, 8)
 0:0/0 = 0
+0:0/0/y_sort_origin = 3
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.0988, 2.20971, 6.01041, 1.94454, 2.12132, 2.65165, 1.23744, 4.94975, -1.76777, 5.3033, -2.56326, 3.44715)
 0:1/0 = 0
+0:1/0/y_sort_origin = 3
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0.883883, -5.12652, -0.883884, 8, -0.707108, 6.01041, 8, -3.53553, 6.36396)
 5:0/0 = 0
+5:0/0/y_sort_origin = 3
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-6.0988, 2.20971, 6.01041, 1.94454, 2.12132, 2.65165, 1.23744, 4.94975, -1.76777, 5.3033, -2.56326, 3.44715)
 
 [sub_resource type="TileSet" id="TileSet_6a782"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hl7gg")
 
 [node name="world" type="Node2D"]
@@ -94,7 +109,8 @@ tile_map_data = PackedByteArray("AAAZAAAAAQACAAUAAAAYAAAAAQACAAUAAAAXAAAAAQACAAU
 tile_set = SubResource("TileSet_u2mog")
 
 [node name="ysort" type="TileMapLayer" parent="."]
+y_sort_enabled = true
 tile_map_data = PackedByteArray("AAACAAAAAAAKAAcAAAAHAAQAAAAKAAcAAAATAAQAAAAKAAcAAAAXAAAAAAAKAAcAAAAIAAsAAAAKAAcAAAAIAAAAAAAAAAUAAAAQAAUAAAAAAAUAAAABAAoAAAAAAAUAAAAFAAoAAAAIAAYAAAAYAAkAAAAIAAYAAAALAAIAAAAIAAYAAAAFAAEAAAAIAAYAAAALAAoAAAAGAAcAAAATAAAAAAAGAAcAAAANAAEAAAAGAAcAAAAVAAsAAAAGAAcAAAAVAAEAAAAAAAEAAAAVAAUAAAAAAAEAAAAJAAMAAAAAAAEAAAADAAwAAAAAAAEAAAAMAAQAAAAAAAAAAAAPAAIAAAAFAAAAAAAAAAcAAAAFAAAAAAAXAAMAAAAFAAAAAAA=")
 tile_set = SubResource("TileSet_6a782")
 
-[node name="player" parent="." instance=ExtResource("4_1to35")]
+[node name="player" parent="ysort" instance=ExtResource("4_1to35")]
