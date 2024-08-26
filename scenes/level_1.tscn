@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=4 uid="uid://isenyt02sq1v"]
+[gd_scene load_steps=5 format=4 uid="uid://isenyt02sq1v"]
 
 [ext_resource type="PackedScene" uid="uid://sf86rx28fbec" path="res://scenes/ground.tscn" id="1_n52tn"]
 [ext_resource type="PackedScene" uid="uid://cv0602587wuu3" path="res://scenes/landscape.tscn" id="2_41rup"]
 [ext_resource type="PackedScene" uid="uid://b1adidy7jwpfs" path="res://scenes/objects.tscn" id="2_a26ir"]
+[ext_resource type="PackedScene" uid="uid://cbl3pc4skg4g2" path="res://scenes/player.tscn" id="4_381pq"]
 
 [node name="level_1" type="Node2D"]
 
@@ -16,3 +17,7 @@ tile_map_data = PackedByteArray("AAD5//v/AAABAAUAAAD+//z/AAADAAYAAAD5//z/AAABAAY
 
 [node name="objects" parent="environment" instance=ExtResource("2_a26ir")]
 tile_map_data = PackedByteArray("AAD7//n/AAAAAAUAAAAGAP3/AAAIAAgAAAAGAPz/AAAIAAcAAAAGAPv/AAAIAAcAAAAGAPr/AAAIAAYAAAADAAMAAAAKAAcAAAD9/wMAAAAGAAcAAAAGAAQAAAAAAAUAAAACAPv/AAAAAAAAAAAAAPv/AAAIAAgAAAAAAPr/AAAIAAcAAAAAAPn/AAAIAAYAAAD8/wUAAAAAAAEAAAAEAPr/AAAAAAEAAAA=")
+
+[node name="player" parent="." instance=ExtResource("4_381pq")]
+z_index = 2
+position = Vector2(28, 13)
