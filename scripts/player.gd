@@ -2,13 +2,14 @@ extends CharacterBody2D
 
 const SPEED = 100.0
 var current_dir = "none"
+
 func _ready() -> void:
 	$AnimatedSprite2D.play("front_idle")
 
-func _physics_process(delta: float) -> void:
-	player_movement(delta)
+func _physics_process(_delta: float) -> void:
+	player_movement(_delta)
 	
-func player_movement(delta: float) -> void:
+func player_movement(_delta: float) -> void:
 	
 	if Input.is_action_pressed("ui_right"):
 		current_dir = "right"
