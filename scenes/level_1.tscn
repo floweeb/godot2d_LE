@@ -68,4 +68,5 @@ tile_map_data = PackedByteArray("AAD7//z/AAAAAAAAAAD7//3/AAAAAAAAAAD7//7/AAAAAAA
 tile_set = SubResource("TileSet_1obq8")
 
 [node name="objects" type="TileMapLayer" parent="environment"]
+tile_map_data = PackedByteArray("AAD3//7/AQAAAAUAAAD6////AQAGAAcAAAD9//3/AQAAAAUAAAD5/wYAAQAAAAUAAAD9/wIAAQAIAAYAAAD9/wMAAQAIAAcAAAD9/wQAAQAIAAcAAAD9/wUAAQAIAAcAAAD9/wYAAQAIAAgAAAADAAQAAQAKAAcAAAABAP//AQAAAAAAAAAFAPz/AQAAAAUAAAAGAP//AQAGAAcAAAAJAP//AQAGAAcAAAA=")
 tile_set = SubResource("TileSet_st0aj")
