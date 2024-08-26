@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://cbl3pc4skg4g2"]
+[gd_scene load_steps=41 format=3 uid="uid://cbl3pc4skg4g2"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_mlv3c"]
 [ext_resource type="Texture2D" uid="uid://b4v1d85180ukf" path="res://art/characters/player.png" id="2_yohgv"]
@@ -288,12 +288,23 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b5rcu"]
+radius = 4.0
+height = 14.0
+
 [node name="player" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_mlv3c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_epat4")
-animation = &"idle_back"
+animation = &"idle_front"
 autoplay = "idle_front"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0, 11)
+shape = SubResource("CapsuleShape2D_b5rcu")
 
 [node name="Camera2D" type="Camera2D" parent="."]

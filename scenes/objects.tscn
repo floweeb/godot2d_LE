@@ -13,19 +13,26 @@ texture = ExtResource("1_bdh55")
 10:0/0 = 0
 0:5/size_in_atlas = Vector2i(3, 4)
 0:5/0 = 0
+0:5/0/y_sort_origin = 14
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.66206, 12.1976, 7.6014, 12.0208, 12.7279, 19.799, 10.253, 26.163, -5.65685, 25.8094, -11.75, 22.25, -11.6673, 15.7331)
 6:7/size_in_atlas = Vector2i(2, 2)
 6:7/0 = 0
 8:6/size_in_atlas = Vector2i(2, 1)
 8:6/0 = 0
+8:6/0/z_index = 2
 8:7/size_in_atlas = Vector2i(2, 1)
 8:7/0 = 0
+8:7/0/z_index = 2
 8:8/size_in_atlas = Vector2i(2, 1)
 8:8/0 = 0
 10:7/size_in_atlas = Vector2i(2, 2)
 10:7/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_wmed8"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_1oixm")
 
 [node name="objects" type="TileMapLayer"]
+z_index = 1
+y_sort_enabled = true
 tile_set = SubResource("TileSet_wmed8")
