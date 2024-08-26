@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1adidy7jwpfs"]
+
+[ext_resource type="Texture2D" uid="uid://buw0rtgpc74cc" path="res://art/objects/objects.png" id="1_bdh55"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1oixm"]
+texture = ExtResource("1_bdh55")
+0:0/0 = 0
+0:1/0 = 0
+5:0/0 = 0
+11:2/size_in_atlas = Vector2i(1, 2)
+11:2/0 = 0
+10:0/size_in_atlas = Vector2i(2, 1)
+10:0/0 = 0
+0:5/size_in_atlas = Vector2i(3, 4)
+0:5/0 = 0
+6:7/size_in_atlas = Vector2i(2, 2)
+6:7/0 = 0
+8:6/size_in_atlas = Vector2i(2, 1)
+8:6/0 = 0
+8:7/size_in_atlas = Vector2i(2, 1)
+8:7/0 = 0
+8:8/size_in_atlas = Vector2i(2, 1)
+8:8/0 = 0
+10:7/size_in_atlas = Vector2i(2, 2)
+10:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_wmed8"]
+sources/0 = SubResource("TileSetAtlasSource_1oixm")
+
+[node name="objects" type="TileMapLayer"]
+tile_set = SubResource("TileSet_wmed8")
